@@ -1,0 +1,202 @@
+// @import 'vars.scss';
+.h-center {
+    display: flex;
+    align-items: center;
+}
+  
+.v-center {
+    display: flex;
+    justify-content: center;
+}
+  
+.vh-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.column-space-between{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+}
+.column-align-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.column-center{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; 
+}
+.home{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+// 音频-------------------------------------------------------------------------------------------------------------
+#canvas1,#canvas2{
+  position: fixed;
+  width: 30px;
+  height: 52px;
+  z-index: 999;
+}
+#canvas1{
+  left:0;
+  bottom:20px;
+}
+#canvas2{
+  right:0;
+  top:20px;
+}
+.number{
+  position: fixed;
+  height: 24px;;
+  right:0; 
+  bottom:20px; 
+  color:#fff; 
+  line-height: 24px;
+  background-color: rgba(255, 255, 255,0.1);
+  padding:0 15px;
+  border-radius: 12px 0 0 12px;
+}
+
+.page{ 
+   position: relative;
+   display: flex!important;
+   @extend .column-center;
+  .filter{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: center;
+    filter: blur(20px);
+    opacity: 0.5;
+    z-index: -1; 
+  } 
+  img{
+    display: block;
+    width: 80%;
+  }
+  .page-boxs{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// 第1页---------------------------------------------------------------------------------------------------------------------------
+.page-1{
+  .filter{
+    background-image: url(../assets/12.jpg);
+    // background-position: 20% 70%;
+    background-size: 100%;
+  }
+  img{
+    width: 50%;
+  }
+  .time-title{
+    margin-top:30px;
+    font-size:28px;
+    color:#f6d023;
+    text-align: center;
+    p:last-child{
+      margin-top:10px;
+      font-size:22px;
+    }
+  }
+}
+
+// 第2页---------------------------------------------------------------------------------------------------------------------------
+.page-2{
+  img:nth-of-type(2){
+    margin:20px 0;
+  }
+  .filter{
+    background-image: url(https://6d61-magic-d13079-1255581239.tcb.qcloud.la/330.jpg?sign=832950a9b929393ce05804a113a70b0f&t=1542688956);
+  }
+}
+
+// 第3页---------------------------------------------------------------------------------------------------------------------------
+.page-3{
+  .filter{
+    background-image: url(../assets/5.jpg);
+  }
+}
+
+// 第4页---------------------------------------------------------------------------------------------------------------------------
+.page-4{
+  .filter{
+    background-image: url(../assets/6.jpg);
+  }
+}
+
+// 第5页---------------------------------------------------------------------------------------------------------------------------
+.page-5{
+  .filter{
+    background-image: url(../assets/7.jpg); 
+  }
+  
+}
+
+// 第6页---------------------------------------------------------------------------------------------------------------------------
+.page-6{
+  .filter{
+    background-image: url(../assets/8.jpg);
+  }
+}
+
+// 第7页---------------------------------------------------------------------------------------------------------------------------
+.page-7{
+  .filter{
+    background-image: url(../assets/9.jpg);
+  }
+  img:nth-of-type(2){
+    margin:20px 0;
+  }
+}
+// 第8页---------------------------------------------------------------------------------------------------------------------------
+.page-8{
+  .filter{
+    background-image: url(../assets/10.jpg);
+  }
+}
+
+// 第9页---------------------------------------------------------------------------------------------------------------------------
+.page-9{
+  .filter{
+    background-image: url(../assets/11.jpg);
+  }
+}
+
+.loading-box{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #fff;
+  z-index: 9999;
+  canvas{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin:200px auto 0;
+  }
+}
+
+

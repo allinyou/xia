@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <title>年度总结</title>
+</head>
+
+<body>
+    <div class="home">
+        <div class="swiper-wrapper">
+            <div class="page-1 page swiper-slide">
+                <div class="filter"></div>
+                <!-- <span class="bir-time ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.5s">丽 · 农历2018年10月30日</span> -->
+                <img class="ani" src="./assets/1.jpg" alt="" swiper-animate-effect="bounceInDown">
+                <div class="ani time-title" swiper-animate-effect="bounceInUp">
+                    <p>好快宝微信小程序</p>
+                </div>
+                <!-- <span class="bir-time ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.5s">华 · 农历2018年11月04日</span> -->
+            </div>
+            <div class="page-2 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/2.png" alt="" swiper-animate-effect="bounceInLeft">
+                <img class="ani" src="./assets/3.png" alt="" swiper-animate-effect="bounceInRight">
+                <img class="ani" src="./assets/4.png" alt="" swiper-animate-effect="bounceInLeft">
+            </div>
+            <div class="page-3 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/5.jpg" alt="" swiper-animate-effect="zoomIn">
+            </div>
+            <div class="page-4 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/6.jpg" alt="" swiper-animate-effect="rollIn">
+            </div>
+            <div class="page-5 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/7.jpg" alt="" swiper-animate-effect="lightSpeedIn">
+            </div>
+            <div class="page-6 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/8.jpg" alt="" swiper-animate-effect="flip">
+            </div>
+            <div class="page-7 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/9.jpg" alt="" swiper-animate-effect="rotateInDownRight">
+                <!-- <img class="ani" src="./assets/9.jpg" alt="" swiper-animate-effect="pulse">
+                <img class="ani" src="./assets/10.jpg" alt="" swiper-animate-effect="rotateInUpLeft"> -->
+            </div>
+            <div class="page-8 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/10.jpg" alt="" swiper-animate-effect="flipInX">
+            </div>
+            <div class="page-9 page swiper-slide">
+                <div class="filter"></div>
+                <img class="ani" src="./assets/11.jpg" alt="" swiper-animate-effect="flipInY">
+            </div>
+        </div>
+    </div>
+    <div class="number fadeInRight animated">1/9</div>
+    <canvas id="canvas1" height="520" width="300"></canvas>
+    <canvas id="canvas2" height="520" width="300"></canvas>
+    <!-- <div class="loading-box">
+        <canvas id="loading" width="300" height="300"></canvas>
+    </div> -->
+    <!-- <canvas id="sakura"></canvas> -->
+</body>
+
+</html>
+<script src="js/swiper.animate.min.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<!-- <script src="js/loading.js"></script> -->
+<script>
+    var numshow = document.querySelector('.number');
+    var mySwiper = new Swiper('.home', {
+        autoplay: false,//可选选项，自动滑动
+        direction: 'vertical',
+        onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素 
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            numshow.innerHTML = (swiper.activeIndex + 1) * 1 + '/9';
+        }
+    })
+
+    //音频
+    var audio = new Audio();
+    var index = 0;
+    var songs = ['assets/audio/Friendships.mp3'];
+    audio.src = songs[index];   // songs[index]
+    audio.autoplay = true;
+
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
+    audio.addEventListener('ended', function () {
+        audio.src = songs[index];
+    })
+
+    var colors = ['red', 'orange', 'cyan']; // , 'purple' 'blue', 'green', 
+    var randomIndex1 = Math.floor(Math.random() * 3);
+    var randomIndex2 = Math.floor(Math.random() * 3);
+    color1 = colors[randomIndex1];
+    color2 = colors[randomIndex2];
+
+    function drawFreq() {
+        var canvas1 = document.getElementById('canvas1');
+        var cxt1 = canvas1.getContext('2d');
+        var canvas2 = document.getElementById('canvas2');
+        var cxt2 = canvas2.getContext('2d');
+        var AudioContext = window.AudioContext || window.webkitAudioContext;
+        var context = new AudioContext();
+        // 创建节点
+        var source = context.createMediaElementSource(audio);
+        var analyser = context.createAnalyser();
+        // 连接：source → analyser → destination
+        source.connect(analyser);
+        analyser.connect(context.destination);
+        var output = new Uint8Array(4);
+        (function drawFreqs() {
+            analyser.getByteFrequencyData(output);
+            cxt1.clearRect(0, 0, canvas1.width, canvas1.height);
+            cxt2.clearRect(0, 0, canvas2.width, canvas2.height);
+            var distance = 150;
+            for (let i = 0; i < 4; i++) {
+                var value1 = output[i] / 1.5; // <===获取数据 
+                var value2 = output[3 - i] / 1.5;
+                // 左边频谱
+                cxt1.beginPath();
+                cxt1.lineWidth = 50;
+                var y = i * distance + 30;
+                cxt1.moveTo(0, y);
+                cxt1.lineTo(value1, y);
+                cxt1.closePath();
+                cxt1.strokeStyle = color1;
+                cxt1.stroke();
+
+                // 右边频谱
+                cxt2.beginPath();
+                cxt2.lineWidth = 50;
+                cxt2.moveTo(canvas2.width, y);
+                cxt2.lineTo(canvas2.width - value2, y);
+                cxt2.closePath();
+                cxt2.strokeStyle = color2;
+                cxt2.stroke();
+            };
+            requestAnimationFrame(drawFreqs);
+        })();
+    }
+    drawFreq(); 
+</script>
