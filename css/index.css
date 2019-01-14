@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.vh-center {
+.vh-center, .loading-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,11 +178,4 @@
   bottom: 0;
   background-color: #fff;
   z-index: 9999;
-}
-
-.loading-box canvas {
-  width: 150px;
-  height: 150px;
-  display: block;
-  margin: 200px auto 0;
 }

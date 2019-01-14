@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="css/index.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <title>年度总结</title>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <title>2018年终总结 · 高荣珍</title>
 </head>
-
 <body>
+    <div class="loading-box">
+        <img src="assets/timg.gif" alt="">
+    </div>
+
     <div class="home">
         <div class="swiper-wrapper">
             <div class="page-1 page swiper-slide">
@@ -66,10 +70,7 @@
     <div class="number fadeInRight animated">1/9</div>
     <canvas id="canvas1" height="520" width="300"></canvas>
     <canvas id="canvas2" height="520" width="300"></canvas>
-    <!-- <div class="loading-box">
-        <canvas id="loading" width="300" height="300"></canvas>
-    </div> -->
-    <!-- <canvas id="sakura"></canvas> -->
+    
 </body>
 
 </html>
@@ -157,4 +158,11 @@
         })();
     }
     drawFreq(); 
+</script>
+<script>
+window.onload = function( ) {
+    $('.loading-box').animate({height: '0'},30,function() {
+        $(this).hide();
+    });
+}
 </script>
