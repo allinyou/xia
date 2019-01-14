@@ -98,7 +98,7 @@
     var index = 0;
     var songs = ['assets/audio/Friendships.mp3'];
     audio.src = songs[index];   // songs[index]
-    audio.autoplay = true;
+    // audio.autoplay = true;
 
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
@@ -161,8 +161,8 @@
 </script>
 <script>
 window.onload = function( ) {
-    $('.loading-box').animate({height: '0'},30,function() {
-        $(this).hide();
-    });
+   setTimeout(function() {
+       $('.loading-box').hide();
+   },200)
 }
 </script>
