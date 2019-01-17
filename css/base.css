@@ -8,10 +8,14 @@ border: none;
 }
 a {
 text-decoration: none;
+color:blue;
 }
 body{
-font-size:0.28rem;
-background-color: #666;
+ font-size:0.3rem; 
+ background-image: url(../assets/logo.png);
+ background-repeat:no-repeat;
+ background-position: 5px 10px;
+ background-size:30px; 
 }
 html,body{
     width: 100%;
