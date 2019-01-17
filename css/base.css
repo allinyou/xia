@@ -16,6 +16,7 @@ body{
  background-repeat:no-repeat;
  background-position: 5px 10px;
  background-size:30px; 
+ background-color: #fff;
 }
 html,body{
     width: 100%;
