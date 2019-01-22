@@ -190,6 +190,7 @@
     }, false);
     audio.addEventListener('ended', function () {
         audio.src = songs[index];
+        audio.play();
     })
     
     $('.music-btn').click(function(){
