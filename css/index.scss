@@ -289,8 +289,9 @@ $main-color: blue;
   height:0.6rem;
   background-color: rgba(0, 0, 0,0.6);
   @extend .vh-center;
+  animation-fill-mode:forwards;
   img{
-    width: 0.4rem;
+    width: 0.36rem;
   }
   .pause-sign{
     display:none;
@@ -301,6 +302,23 @@ $main-color: blue;
     top:0;
     background-color: #fff;
     transform: rotate(45deg);
+  }
+}
+
+.rotates{
+  animation-name:rotates;
+  animation-duration:2s;
+  animation-timing-function:linear;
+  animation-delay:0;
+  animation-iteration-count:infinite;
+}
+
+@keyframes rotates {
+  0%{
+    transform: rotate(0)
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }
 
