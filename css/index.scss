@@ -283,20 +283,20 @@ $main-color: blue;
 .music-btn{
   position: fixed;
   right:25px;
-  top:10px;
+  top:20px;
   border-radius: 50%;
-  width: 0.8rem;
-  height:0.8rem;
+  width: 0.6rem;
+  height:0.6rem;
   background-color: rgba(0, 0, 0,0.6);
   @extend .vh-center;
   img{
-    width: 0.45rem;
+    width: 0.4rem;
   }
   .pause-sign{
     display:none;
     position: absolute;
     width: 1px;
-    height: 0.8rem;
+    height: 0.6rem;
     left:50%;
     top:0;
     background-color: #fff;
