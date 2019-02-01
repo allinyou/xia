@@ -290,6 +290,12 @@ $main-color: blue;
   background-color: rgba(0, 0, 0,0.6);
   @extend .vh-center;
   animation-fill-mode:forwards;
+  animation-name:rotates;
+  animation-duration:2s;
+  animation-timing-function:linear;
+  animation-delay:0;
+  animation-iteration-count:infinite;
+  animation-play-state:paused;
   img{
     width: 0.36rem;
   }
@@ -306,11 +312,7 @@ $main-color: blue;
 }
 
 .rotates{
-  animation-name:rotates;
-  animation-duration:2s;
-  animation-timing-function:linear;
-  animation-delay:0;
-  animation-iteration-count:infinite;
+  animation-play-state:running
 }
 
 @keyframes rotates {

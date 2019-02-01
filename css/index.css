@@ -261,6 +261,12 @@
   height: 0.6rem;
   background-color: rgba(0, 0, 0, 0.6);
   animation-fill-mode: forwards;
+  animation-name: rotates;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
 
 .music-btn img {
@@ -279,11 +285,7 @@
 }
 
 .rotates {
-  animation-name: rotates;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0;
-  animation-iteration-count: infinite;
+  animation-play-state: running;
 }
 
 @keyframes rotates {
