@@ -182,7 +182,8 @@
     var index = 0;
     var songs = ['assets/audio/Friendships.mp3'];
     audio.src = songs[index];   // songs[index]
-   // audio.autoplay = true;
+    audio.autoplay = true;
+    $('.music-btn').addClass('rotates');
 
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
@@ -232,7 +233,7 @@
             for (let i = 0; i < 4; i++) {
                 var value1 = output[i] / 1.5; // <===获取数据 
                 var value2 = output[3 - i] / 1.5;
-                // 左边频谱
+                // 左边音轨
                 cxt1.beginPath();
                 cxt1.lineWidth = 50;
                 var y = i * distance + 30;
@@ -242,7 +243,7 @@
                 cxt1.strokeStyle = color1;
                 cxt1.stroke();
 
-                // 右边频谱
+                // 右边音轨
                 cxt2.beginPath();
                 cxt2.lineWidth = 50;
                 cxt2.moveTo(canvas2.width, y);
