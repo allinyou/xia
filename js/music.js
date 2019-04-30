@@ -3,6 +3,12 @@
  var musicState = true;
  var index = 1;
  var songs = ['assets/audio/happy.mp3','assets/audio/routine.mp3'];
+
+ var date = new Date();
+ console.log(date.getDate())
+ if (date.getMonth()==4&&date.getDate()==5){
+     index = 0;
+ }
  audio.src = songs[index];   // songs[index]
  audio.autoplay = true;
  
