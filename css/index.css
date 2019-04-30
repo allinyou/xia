@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.vh-center, .page-3, .page-4, .page-5, .page-6, .page-7, .page-8, .page-9, .loading-box, .music-btn {
+.vh-center, .loading-box, .music-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@
   align-items: center;
 }
 
-.column-center, .page-1 {
+.column-center, .page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,103 +111,12 @@
   margin-bottom: 90px;
 }
 
-.page-2 img {
-  display: block;
-  margin: 0 auto;
+.page-3 img:first-child {
+  margin-bottom: 40px;
 }
 
-.page-2 img:nth-of-type(1) {
-  margin-top: 50px;
-}
-
-.page-2 img:nth-of-type(2) {
-  margin: 20px auto 0;
-}
-
-.page-2 .pr-title, .page-2 .pr {
-  display: block;
-  margin-top: 10px;
-  padding: 0 15px;
-  text-align: right;
-}
-
-.page-2 .pr-title {
-  color: blue;
-  margin-top: 40px;
-}
-
-.page-3 .fan-1 {
-  display: block;
-  position: absolute;
-  top: 20%;
-  left: 10px;
-}
-
-.page-4 .fan-1 {
-  display: block;
-  position: absolute;
-  top: 20%;
-  left: 10px;
-}
-
-.page-5 .fan-2 {
-  display: block;
-  position: absolute;
-  bottom: 20%;
-  right: 10px;
-}
-
-.page-6 .fan-2 {
-  display: block;
-  position: absolute;
-  bottom: 20%;
-  right: 10px;
-}
-
-.page-7 .fan-2 {
-  display: block;
-  position: absolute;
-  bottom: 20%;
-  right: 10px;
-}
-
-.page-8 .fan-3 {
-  display: block;
-  position: absolute;
-  top: 20%;
-  left: 10px;
-}
-
-.page-9 .fan-1 {
-  display: block;
-  position: absolute;
-  top: 20%;
-  left: 10px;
-}
-
-.page-10 img {
-  display: block;
-  margin: 0 auto;
-}
-
-.page-10 img:nth-of-type(1) {
-  margin-top: 50px;
-}
-
-.page-10 img:nth-of-type(2) {
-  margin: 20px auto 0;
-}
-
-.page-10 .pr-title, .page-10 .pr {
-  display: block;
-  margin-top: 10px;
-  padding: 0 15px;
-  text-align: right;
-}
-
-.page-10 .pr-title {
-  color: blue;
-  margin-top: 40px;
+.page-6 img:first-child {
+  margin-bottom: 40px;
 }
 
 .loading-box {

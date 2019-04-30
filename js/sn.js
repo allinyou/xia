@@ -222,7 +222,7 @@ function loop() {
     var text = "霞 · 生日快乐";  
   ctx.font = "120px sans-serif";
   var textData = ctx.measureText(text);
-  ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,100))+","+parseInt(random(0,200))+",0.3)";
+  ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,100))+","+parseInt(random(0,200))+",0.7)";
   ctx.fillText(text,cw /2-textData.width/2,ch/2+40); 
   
 	// loop over each firework, draw it, update it

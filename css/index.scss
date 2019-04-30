@@ -75,6 +75,7 @@ $main-color: blue;
 
 // 滑动页公用样式---------------------------------------------------------------------------------------------------------------------
 .page{ 
+  @extend .column-center;
   img{
     display: block;
     width: 80%;
@@ -98,7 +99,6 @@ $main-color: blue;
 // 第1页---------------------------------------------------------------------------------------------------------------------------
 .page-1{
   // background-color: #000;
-  @extend .column-center;
   canvas{
     position: absolute;
     top:0;
@@ -108,131 +108,54 @@ $main-color: blue;
   img:first-of-type{
     margin-bottom:90px;
   }
+  
 }
 
 // 第2页---------------------------------------------------------------------------------------------------------------------------
 .page-2{
-  img{
-    display: block;
-    margin: 0 auto;
-  }
-  img:nth-of-type(1){
-    margin-top:50px;
-  }
-  img:nth-of-type(2){
-    margin:20px auto 0;
-  }
-  .pr-title,.pr{
-    display: block;
-    margin-top:10px;
-    padding: 0 15px;
-    text-align: right;
-  }
-  .pr-title{
-    color:$main-color;
-    margin-top:40px;
-  }
+  
+  
 }
 
 // 第3页---------------------------------------------------------------------------------------------------------------------------
 .page-3{
-  @extend .vh-center;
-  .fan-1{
-    display: block;
-    position: absolute;
-    top:20%;
-    left:10px;
+  img:first-child{
+    margin-bottom:40px; 
   }
 }
 
 // 第4页---------------------------------------------------------------------------------------------------------------------------
 .page-4{
-  @extend .vh-center;
-  .fan-1{
-    display: block;
-    position: absolute;
-    top:20%;
-    left:10px;
-  }
+
 }
 
 // 第5页---------------------------------------------------------------------------------------------------------------------------
 .page-5{
-  @extend .vh-center;
-  .fan-2{
-    display: block;
-    position: absolute;
-    bottom:20%;
-    right:10px;
-  }
+ 
 }
 
 // 第6页---------------------------------------------------------------------------------------------------------------------------
 .page-6{
-  @extend .vh-center;
-  .fan-2{
-    display: block;
-    position: absolute;
-    bottom:20%;
-    right:10px;
+  img:first-child{
+    margin-bottom:40px;
   }
 }
 
 // 第7页---------------------------------------------------------------------------------------------------------------------------
 .page-7{
-  @extend .vh-center;
-  .fan-2{
-    display: block;
-    position: absolute;
-    bottom:20%;
-    right:10px;
-  }
+  
 }
 // 第8页---------------------------------------------------------------------------------------------------------------------------
 .page-8{
-  @extend .vh-center;
-  .fan-3{
-    display: block;
-    position: absolute;
-    top:20%;
-    left:10px;
-  }
+  
 }
 
 // 第9页---------------------------------------------------------------------------------------------------------------------------
 .page-9{
-  @extend .vh-center;
-  .fan-1{
-    display: block;
-    position: absolute;
-    top:20%;
-    left:10px;
-  }
+ 
 }
 
-// 第10页---------------------------------------------------------------------------------------------------------------------------
-.page-10{
-  img{
-    display: block;
-    margin: 0 auto;
-  }
-  img:nth-of-type(1){
-    margin-top:50px;
-  }
-  img:nth-of-type(2){
-    margin:20px auto 0;
-  }
-  .pr-title,.pr{
-    display: block;
-    margin-top:10px;
-    padding: 0 15px;
-    text-align: right;
-  }
-  .pr-title{
-    color:$main-color;
-    margin-top:40px;
-  }
-}
+
 
 .loading-box{
   position: fixed;

@@ -2,7 +2,7 @@
  var audio = new Audio();
  var musicState = true;
  var index = 1;
- var songs = ['assets/audio/Friendships.mp3','https://6d61-magic-d13079-1255581239.tcb.qcloud.la/xia/routine.mp3?sign=88f708e5335a21b10a6d466340dfea9e&t=1556588394','assets/audio/C400001N8e5Q4Gjxda.mp3','assets/audio/lost.mp3'];
+ var songs = ['assets/audio/happy.mp3','assets/audio/routine.mp3'];
  audio.src = songs[index];   // songs[index]
  audio.autoplay = true;
  
