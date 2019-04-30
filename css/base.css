@@ -12,11 +12,7 @@ color:blue;
 }
 body{
  font-size:0.3rem; 
- background-image: url(../assets/logo.png);
- background-repeat:no-repeat;
- background-position: 5px 10px;
- background-size:30px; 
- background-color: #fff;
+ background-color: #333333;
 }
 html,body{
     width: 100%;
