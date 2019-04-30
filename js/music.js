@@ -2,10 +2,9 @@
  var audio = new Audio();
  var musicState = true;
  var index = 1;
- var songs = ['assets/audio/happy.mp3','assets/audio/routine.mp3'];
+ var songs = ['assets/audio/happy.mp3','assets/audio/060c_510b_045f_1f1c3bf4c3fa716205e1358a7c32abb0.m4a'];
 
  var date = new Date();
- console.log(date.getDate())
  if (date.getMonth()==4&&date.getDate()==5){
      index = 0;
  }
