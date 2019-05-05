@@ -5,9 +5,9 @@
  var songs = ['assets/audio/happy.mp3','assets/audio/060c_510b_045f_1f1c3bf4c3fa716205e1358a7c32abb0.m4a'];
 
  var date = new Date();
-//  if (date.getMonth()==4&&date.getDate()==5){
-//      index = 0;
-//  }
+ if (date.getMonth()==4&&date.getDate()==5){
+     index = 0;
+ }
  audio.src = songs[index];   // songs[index]
  audio.autoplay = true;
  
