@@ -1,15 +1,20 @@
  //音频
  var audio = new Audio();
  var musicState = true;
- var index = 1;
- var songs = ['assets/audio/happy.mp3','assets/audio/DYcBAFvy9HyARHjeADcFn15LKpY809.mp3'];
+ var index = Math.floor(Math.random()*5);
+ var songs = ['assets/audio/060c_510b_045f_1f1c3bf4c3fa716205e1358a7c32abb0.m4a','assets/audio/DYcBAFvy9HyARHjeADcFn15LKpY809.mp3','assets/audio/routine.mp3','assets/audio/RQ0DAFUGMBqAXhyYAD1yGcoJzZ8227.mp3','assets/audio/Sw0DAFUJgCKAND7rAEKIkU1ZFjM135.mp3'];
 
- var date = new Date();
- if (date.getMonth()==4&&date.getDate()==5){
-     index = 0;
- }
+//  var date = new Date();
+//  if (date.getMonth()==4&&date.getDate()==5){
+//      index = 0;
+//  }
  audio.src = songs[index];   // songs[index]
  audio.autoplay = true;
+
+ audio.addEventListener('ended', function() {
+    index = Math.floor(Math.random()*5);;
+    audio.src = songs[index];
+})
  
  $('.music-btn').click(function(){
      if (musicState) {

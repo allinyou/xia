@@ -219,7 +219,7 @@ function loop() {
 	// lighter creates bright highlight points as the fireworks and particles overlap each other
 	ctx.globalCompositeOperation = 'lighter';
 	
-    var text = "霞 · 生日快乐";  
+  var text = "";  //霞 · 生日快乐
   ctx.font = "120px sans-serif";
   var textData = ctx.measureText(text);
   ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,100))+","+parseInt(random(0,200))+",0.7)";
